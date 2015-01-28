@@ -37,10 +37,6 @@ body {
   font-size: 160%;
   line-height: 160%;
   background-color: #ffffff;
-  background-image: url("/img/animal3-rotated-lightened.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 610px;
 }
 
 
@@ -144,7 +140,7 @@ a:hover {
 }
 
 .photo-user {
-
+  margin-top: 10px;
 }
 
 .like-count span{
@@ -200,19 +196,20 @@ textarea {
   margin-top: 40px;
 }
 
-
-
-/*
-
-
-.login_form {
-    text-align:center;
-
+.user-profile {
+  margin-top: 175px;
+  margin-left: 50px;
+  width: 350px;
+  float: left;
 }
 
-
-.signup {
-    text-align: center;
-    margin-top: 30px;
+.user-profile span{
+  color: green;
+  font-size: .8em;
 }
-*/
+
+.user-bikes {
+  float: right;
+  margin-top: 30px;
+  margin-right: 50px;
+}

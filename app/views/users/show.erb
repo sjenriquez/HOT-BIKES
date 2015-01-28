@@ -1,0 +1,14 @@
+<div class="user-profile">
+  <div class="photo-user">
+    <%= user.name %>
+  </div>
+  <div class="photo-user">
+    <span>Bio: </span><%= user.bio %>
+  </div>
+</div>
+
+<div class="user-bikes">
+  <% user.photos.each do |photo| %>
+    <%= erb :'photos/show', locals: {photo: photo} %>
+  <% end %>
+</div>

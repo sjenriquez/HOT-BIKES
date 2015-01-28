@@ -29,12 +29,12 @@ put '/photos/:id' do        # Edit photo
   redirect ("/photos/#{params[:id]}")
 end
 
-delete '/photos/:id' do   # Delete photo
+delete '/photos/:id' do     # Delete photo
   Photo.find_by(id: params[:id]).destroy
   redirect :'photos/index'
 end
 
-post '/like' do           # User likes a photo
+post '/like' do             # User likes a photo
   photo = Photo.find_by(id: params[:photo_id])
   current_user.liked_photos << photo
 
