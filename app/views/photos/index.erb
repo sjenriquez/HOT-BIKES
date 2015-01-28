@@ -2,19 +2,6 @@
   <% highest_liked_sort = @photos.sort {|x,y| y.users_liked.count <=> x.users_liked.count} %>
 
   <% highest_liked_sort.each do |photo| %>
-    <div class="photo">
-      <a href="/photos/<%= photo.id %>"><img src="<%= photo.url %>"></a>
-      <p><%= photo.title %></p>
-      <ul>
-        <li><a href="/user/<%= photo.user.id %>"><%= photo.user.name %></a></li>
-        <li>This photo has <%= photo.users_liked.count %> likes.</li>
-        <li>
-          <form action="/like" method="post">
-            <input type="hidden" name="photo_id" value="<%= photo.id %>">
-            <input type="submit" value="Like!">
-          </form>
-        </li>
-      </ul>
-    </div>
+    <%= erb :'photos/show', locals: {photo: photo} %>
   <% end %>
 </div>
