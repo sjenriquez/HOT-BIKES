@@ -16,7 +16,7 @@ gem 'rake'
 
 gem 'shotgun'
 
-gem 'faker'
+gem 'faker', '~>1.4.3'
 gem 'image_suckr'
 
 group :test do
