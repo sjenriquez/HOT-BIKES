@@ -1,5 +1,7 @@
 <div class="all-photos">
-  <% @photos.each do |photo| %>
+  <% highest_liked_sort = @photos.sort {|x,y| y.users_liked.count <=> x.users_liked.count} %>
+
+  <% highest_liked_sort.each do |photo| %>
     <div class="photo">
       <a href="/photo/<%= photo.id %>"><img src="<%= photo.url %>"></a>
       <p><%= photo.title %></p>
