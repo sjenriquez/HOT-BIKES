@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :password_digest
-      t.text :bio
+      t.text :bio, :default => 'No bio provided'
 
       t.timestamps
     end
