@@ -1,52 +1,52 @@
 h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    line-height:100%;
-    margin: 0.5em 0;
-    color: #000000;
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height:100%;
+  margin: 0.5em 0;
+  color: #000000;
 }
 
 h1 {
-    font-size: 1.8em;
-    font-family: 'Roboto Slab', serif;
-    margin: 0;
+  font-size: 1.8em;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
 }
 
 h2 {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 
 h3 {
-    font-size: 1.4em;
+  font-size: 1.4em;
 }
 
 h4 {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 h5 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 h6 {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 160%;
-    line-height: 160%;
-    background-color: #ffffff;
-    background-image: url("/img/animal3-rotated-lightened.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 610px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 160%;
+  line-height: 160%;
+  background-color: #ffffff;
+  background-image: url("/img/animal3-rotated-lightened.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 610px;
 }
 
 
 #content{
-    width: 95%;
-    margin: 0 auto;
+  width: 95%;
+  margin: 0 auto;
 }
 
 #title {
@@ -56,43 +56,43 @@ body {
 }
 
 #title a:hover{
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 a:visited {
-    color: #000;
+  color: #000;
 }
 
 a:hover {
-    color: #AAA;
-    text-decoration: underline;
+  color: #AAA;
+  text-decoration: underline;
 }
 
 #login-container {
-    width: 85%;
-    text-align: right;
-    display: inline-block;
+  width: 85%;
+  text-align: right;
+  display: inline-block;
 }
 
 #login-toolbar {
-    width: 200px;
-    float: right;
+  width: 200px;
+  float: right;
 }
 
 .photo {
-    width: 400px;
-    height: 400px;
-    padding: 10px;
-    text-align: center;
-    float: left;
-    position: relative;
-    bottom: 0;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  text-align: center;
+  float: left;
+  position: relative;
+  bottom: 0;
 }
 
 .photo img {
@@ -117,53 +117,56 @@ a:hover {
 
 }
 
-/*
-#login {
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 40px;
+.user-details{
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
 }
 
-#signup {
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 30px;
+textarea {
+  resize: none;
+  border: 1px solid #CCCCCC;
 }
 
-#username{
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 40px;
-}
-
-#password {
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 20px;
+.password {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .submit {
-    width: 350px;
-    margin: 0 auto;
-    padding-top: 20px;
-    text-align: center;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
 }
+
+#login {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#signup {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+
+/*
+
 
 .login_form {
     text-align:center;
 
 }
 
-.login {
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 40px;
-}
 
 .signup {
     text-align: center;

@@ -1,0 +1,22 @@
+<div id="signup">
+  <h2>Sign up!</h2>
+  <form action="/signup" method="POST">
+    <div class="user-details">
+      Name: <input type="text" name="user[name]">
+    </div>
+    <div class="user-details">
+      Email address: <input type="text" name="user[email]">
+    </div><div class="user-details">
+      Short bio: <textarea name="user[bio]"></textarea>
+    </div>
+    <div class="password">
+      Password: <input type="password" name="user[password]">
+    </div>
+    <div class="password">
+      Confirm Password: <input type="password" name="user[password_confirmation]">
+    </div>
+    <div class="submit">
+      <input type="Submit">
+    </div>
+  </form>
+</div>
