@@ -1,0 +1,23 @@
+<div class="show-photo">
+  <a href="/photos/<%= photo.id %>"><img src="<%= photo.url %>"></a>
+
+  <div class="photo-title">
+    <form class="edit-title" action="/photos/<%= photo.id %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <input type="text" name="title" value="<%= photo.title %>">
+      <input type="submit">
+    </form>
+  </div>
+
+  <div class="delete">
+    <form action="/photos/<%= photo.id %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <input type="submit" value="Delete">
+    </form>
+  </div>
+
+  <div class="like-count">
+    This photo has <span><%= photo.users_liked.count %></span> likes.
+  </div>
+
+</div>
