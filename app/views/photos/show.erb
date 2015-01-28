@@ -1,0 +1,13 @@
+<div class="show-photo">
+  <img src="<%= @photo.url %>"></a>
+  <p><%= @photo.title %> <a href="/photos/<%= @photo.id %>/edit">Edit Title</a></p>
+  <ul>
+    <li><a href="/user/<%= @photo.user.id %>"><%= @photo.user.name %></a></li>
+    <li>This photo has <%= @photo.users_liked.count %> likes.</li>
+    <li><form action="/like" method="post">
+          <input type="hidden" name="photo_id" value="<%= @photo.id %>">
+          <input type="submit" value="Like!">
+        </form>
+    </li>
+  </ul>
+</div>
