@@ -74,25 +74,72 @@ a:hover {
   text-decoration: underline;
 }
 
-#login-container {
-  width: 85%;
-  text-align: right;
+#nav-container {
+  width: 100%;
   display: inline-block;
+  margin: 0 auto;
+}
+
+#nav-bar {
+  width: 500px;
+  float: left;
+  text-align: left;
+  margin-left: 100px
 }
 
 #login-toolbar {
   width: 200px;
   float: right;
+  text-align: right;
+  margin-right: 100px;
+}
+
+.new-photo {
+  width: 450px;
+  height: 400px;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.new-photo ul li {
+  list-style: none;
+}
+
+.new-photo-inputs{
+  width: 330px;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.show-photo {
+  width: 600px;
+  padding: 10px;
+  text-align: center;
+  margin:0 auto;
+  position: relative;
+}
+
+.show-photo img {
+  display: block;
+  max-width: 590px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+.show-photo ul li {
+  list-style: none;
+  margin-left: -35px;
 }
 
 .photo {
-  width: 400px;
+  width: 350px;
   height: 400px;
   padding: 10px;
   text-align: center;
   float: left;
   position: relative;
-  bottom: 0;
 }
 
 .photo img {
@@ -111,6 +158,7 @@ a:hover {
 
 .photo ul li {
   list-style: none;
+  margin-left: -35px;
 }
 
 .new-photo {
