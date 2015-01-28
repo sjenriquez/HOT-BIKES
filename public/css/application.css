@@ -1,4 +1,230 @@
-/*== MAIN ==*/
+h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height:100%;
+    margin: 0.5em 0;
+    color: #000000;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
+
 body {
-  border-top: 1em solid black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 160%;
+    line-height: 160%;
+    background-color: #ffffff;
+    background-image: url("/img/animal3-rotated-lightened.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 610px;
+}
+
+
+#content{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#title {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#title a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #AAA;
+    text-decoration: underline;
+}
+
+#login-container {
+    width: 85%;
+    text-align: right;
+    display: inline-block;
+}
+
+#login-toolbar {
+    width: 200px;
+    float: right;
+}
+
+#login {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#signup {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#username{
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#password {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.submit {
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#all-photos {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center;
+}
+
+#create_survey {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.create-survey-left{
+    width: 55%;
+    float: left;
+    text-align: left;
+    margin-top: 78px;
+}
+
+.create-survey-right{
+    width: 30%;
+    float: right;
+    text-align: left;
+    padding-top: 43px;
+}
+
+.survey-list {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.survey-title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+}
+
+li.surveys {
+    font-size: .8em;
+}
+
+.question {
+    visibility: hidden;
+}
+
+.add_choice {
+    visibility: hidden;
+    margin: 5px 0;
+}
+
+.choice {
+    visibility: hidden;
+}
+
+.add_question {
+    margin: 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.question-choices {
+    font-size: .8em;
+}
+
+p {
+    margin: 1px;
+}
+
+#survey-questions {
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+}
+
+input[type=radio] {
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-top: -6px;
+}
+
+.hidden {
+    display:none;
+}
+
+.login_form {
+    text-align:center;
+
+}
+
+.login {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 30px;
 }

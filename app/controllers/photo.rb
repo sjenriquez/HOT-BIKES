@@ -1,4 +1,5 @@
-get '/photos' do
+get '/photos' do          # Display all photos from all users
+  @photos = Photo.all
   erb :'photos/index'
 end
 
