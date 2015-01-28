@@ -1,13 +1,13 @@
-get '/photos' do          # Display all photos from all users
+get '/photos' do      # Display all photos from all users
   @photos = Photo.all
   erb :'photos/index'
 end
 
-get '/photos/new' do
+get '/photos/new' do  # Route to new photo form
   erb :'photos/new'
 end
 
-post '/photos' do
+post '/photos' do     # Post route for new photo
   erb :'photos/index'
 end
 
