@@ -1,1 +1,1 @@
-# sinatra-mvc-skeleton
+# photoes
