@@ -9,18 +9,16 @@
     )
 end
 
+suckr = ImageSuckr::GoogleSuckr.new
 
-100.times do
-  suckr = ImageSuckr::GoogleSuckr.new
-  Photo.create(
-   url:  suckr.get_image_url({"q" => "feet"}),
-   user_id: (1..10).to_a.sample
-   )
+User.all.each do |user|
+  5.times do
+    user.photos << Photo.create(url: suckr.get_image_url({"q" => "feet"}))
+  end
 end
 
-20.times do
-  like = Like.create(
-    photo_id: (1..100).to_a.sample,
-    user_id: (1..20).to_a.sample
-    )
+User.all.each do |user|
+  5.times do
+    user.liked_photos << Photo.all.sample
+  end
 end
