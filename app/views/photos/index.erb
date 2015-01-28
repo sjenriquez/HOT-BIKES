@@ -1,3 +1,13 @@
 <div class="all-photos">
-
+  <% @photos.each do |photo| %>
+    <div class="photo">
+      <a href="/photo/<%= photo.id %>"><img src="<%= photo.url %>"></a>
+      <p><%= photo.title %></p>
+      <ul>
+        <li><a href="/user/<%= photo.user.id %>"><%= photo.user.name %></a></li>
+        <li>This photo has <%= photo.users_liked.count %> likes.</li>
+        <li><form action="/like" method="post"><input type="submit" value="Like!"></form></li>
+      </ul>
+    </div>
+  <% end %>
 </div>
