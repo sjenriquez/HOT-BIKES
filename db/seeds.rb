@@ -12,7 +12,7 @@ end
 suckr = ImageSuckr::GoogleSuckr.new
 
 User.all.each do |user|
-  user.photos << Photo.create(url: suckr.get_image_url({"q" => "motorcycle"}))
+  user.photos << Photo.create(url: suckr.get_image_url({"q" => "cafe racer"}))
 end
 
 User.all.each do |user|
