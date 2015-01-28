@@ -17,6 +17,7 @@ gem 'rake'
 gem 'shotgun'
 
 gem 'faker'
+gem 'image_suckr'
 
 group :test do
   gem 'shoulda-matchers'
