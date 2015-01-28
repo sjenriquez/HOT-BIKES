@@ -31,7 +31,7 @@ end
 
 delete '/photos/:id' do     # Delete photo
   Photo.find_by(id: params[:id]).destroy
-  redirect :'photos/index'
+  redirect ('/photos')
 end
 
 post '/like' do             # User likes a photo
