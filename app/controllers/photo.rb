@@ -32,6 +32,12 @@ delete '/photos/:id' do
 end
 
 post '/like' do       # User likes a photo
-  current_user.liked_photos << Photo.find_by(id: params[:photo_id])
-  redirect("/photos/#{params[:photo_id]}")
+  photo = Photo.find_by(id: params[:photo_id])
+  current_user.liked_photos << photo
+
+  if request.xhr?
+    photo.users_liked.count.to_s
+  else
+    redirect("/photos/#{params[:photo_id]}")
+  end
 end
