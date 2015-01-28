@@ -24,15 +24,17 @@
 
   <header>
     <div id="nav-container">
-      <div id="nav-bar">
-        <a href="/">Home</a> |
-        <a href="/photos/new">Upload New Bike</a>
-      </div>
+      <% if current_user %>
+        <div id="nav-bar">
+          <a href="/">Home</a> |
+          <a href="/photos/new">Upload New Bike</a>
+        </div>
+      <% end %>
       <div id="login-toolbar">
         <% if current_user %>
           <a href="/logout">Logout</a>
         <% else %>
-          <a href="/login">Login</a>
+          <a href="/login">Login</a> |
           <a href="/signup">Signup</a>
         <% end %>
       </div>

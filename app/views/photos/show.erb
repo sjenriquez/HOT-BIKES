@@ -2,14 +2,15 @@
   <a href="/photos/<%= photo.id %>"><img src="<%= photo.url %>"></a>
 
   <div class="photo-title">
-    <%= photo.title %>
+    <div><%= photo.title %></div>
     <% if photo.user_id == current_user.id %>
-      <a class="edit-title" href="/photos/<%= photo.id %>/edit">Edit Title</a>
+      <a class="edit" href="/photos/<%= photo.id %>/edit">Edit Title</a>
+      <a class="edit" href="/photos/<%= photo.id %>/edit">Delete Photo</a>
     <% end %>
   </div>
 
   <div class="photo-user">
-    <a href="/user/<%= photo.user.id %>"><%= photo.user.name %></a>
+    Posted by: <a href="/user/<%= photo.user.id %>"><%= photo.user.name %></a>
   </div>
 
   <div class="like-count">

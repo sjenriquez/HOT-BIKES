@@ -2,7 +2,8 @@ get '/' do
   if current_user
     redirect '/photos'
   else
-    erb :index
+    @photos = Photo.all
+    erb :index, locals: {photo: @photos}
   end
 end
 
