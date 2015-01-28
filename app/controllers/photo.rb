@@ -19,8 +19,8 @@ get '/photos/:id/edit' do
 end
 
 get '/photos/:id' do  # Display photo
-  @photo = Photo.find_by(id: params[:id])
-  erb :'photos/show'
+  photo = Photo.find_by(id: params[:id])
+  erb :'photos/show', locals: {photo: photo}
 end
 
 put '/photos/:id' do
