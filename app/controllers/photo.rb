@@ -31,7 +31,12 @@ end
 put '/photos/:id' do        # Edit photo
   photo = Photo.find_by(id: params[:id])
   photo.update(title: params[:title])
-  redirect ("/photos/#{params[:id]}")
+
+  if request.xhr?
+    photo.title.to_s
+  else
+    redirect ("/photos/#{params[:id]}")
+  end
 end
 
 delete '/photos/:id' do     # Delete photo

@@ -2,6 +2,14 @@
   <a href="/photos/<%= photo.id %>"><img src="<%= photo.url %>"></a>
 
   <div class="photo-title">
+    <div class="edit-form">
+      <form class='edit-title' action='/photos/<%= photo.id %>' method='post'>
+          <input type='hidden' name='_method' value='put'>
+          <input type='text' name='title' value="<%= photo.title %>">
+          <input type='submit' value='Edit title'>
+      </form>
+    </div>
+
     <div class="title"><%= photo.title %></div>
     <% if photo.user_id == current_user.id %>
       <a class="edit" href="/photos/<%= photo.id %>/edit">Edit Title</a>

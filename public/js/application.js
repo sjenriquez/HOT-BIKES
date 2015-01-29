@@ -1,7 +1,8 @@
 $(document).ready(function() {
   var $like = $('.like');
   var $del = $('.delete-form');
-  // var $edit = $('.edit');
+  var $edit = $('.edit');
+  var $editSubmit = $('.edit-title')
 
   $like.on('submit', function(event) {
     event.preventDefault();
@@ -35,19 +36,31 @@ $(document).ready(function() {
     });
   });
 
-  // $edit.on('click', function(event) {
-  //   event.preventDefault;
-  //   var $editLink = $(event.target);
+  $edit.on('click', function(event) {
+    event.preventDefault();
+    var $editLink = $(event.target);
 
-  //   $editLink.closest('.show-photo').find('.title').html(
-  //     <form class="edit-title" action="/photos/<%= photo.id %>" method="post">
-  //       <input type="hidden" name="_method" value="put">
-  //       <input type="text" name="title" value="<%= photo.title %>">
-  //       <input type="submit" value="Edit title">
-  //     </form>
-  //     );
-  //   }
-  // }
+    $editLink.closest('.show-photo').find('.edit-form').show();
+    $editLink.closest('.show-photo').find('.title').hide();
+  })
+
+  $editSubmit.on('submit', function(event) {
+    event.preventDefault();
+    var $editForm = $(event.target);
+
+    $editForm.children('input[type=submit]').val("Editing...");
+
+    $.ajax({
+      url: $editForm.attr('action'),
+      type: 'put',
+      data: $editForm.serialize()
+    })
+    .done(function(response) {
+      $editForm.closest('.show-photo').find('.title').show();
+      $editForm.closest('.show-photo').find('.edit-form').hide();
+      $editForm.closest('.show-photo').find('.title').html(response);
+    })
+  })
 
 
 });
