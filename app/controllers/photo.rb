@@ -10,7 +10,7 @@ end
 post '/photos' do           # Post route for new photo
   photo = Photo.create(params[:photo])
   current_user.photos << photo
-  redirect("/photos/#{photo.id}")
+  redirect("/user/#{current_user.id}")
 end
 
 get '/photos/:id/edit' do   # Edit photo
