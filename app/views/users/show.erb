@@ -5,6 +5,9 @@
   <div class="photo-user">
     <span>Bio: </span><%= user.bio %>
   </div>
+  <% if user.id == current_user.id %>
+    <a href="/user/<%= user.id %>/edit"><span>Edit profile</span></a>
+  <% end %>
 </div>
 
 <div class="user-bikes">

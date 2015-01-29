@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var $like = $('.like');
   var $del = $('.delete-form');
+  // var $edit = $('.edit');
 
   $like.on('submit', function(event) {
     event.preventDefault();
@@ -34,5 +35,21 @@ $(document).ready(function() {
     });
   });
 
+  // $edit.on('click', function(event) {
+  //   event.preventDefault;
+  //   var $editLink = $(event.target);
+
+  //   $editLink.closest('.show-photo').find('.title').html(
+  //     <form class="edit-title" action="/photos/<%= photo.id %>" method="post">
+  //       <input type="hidden" name="_method" value="put">
+  //       <input type="text" name="title" value="<%= photo.title %>">
+  //       <input type="submit" value="Edit title">
+  //     </form>
+  //     );
+  //   }
+  // }
+
 
 });
+
+

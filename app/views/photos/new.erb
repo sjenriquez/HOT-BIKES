@@ -1,6 +1,15 @@
 <div class="new-photo">
   <form action="/photos" method="post">
     <div class="new-photo-inputs">
+      <% if @errors %>
+        <% @errors.each do |key, messages| %>
+          <div class="errors"><%= key %>
+            <% messages.each do |message| %>
+              <%= message %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
       Photo url: <input type="text" name="photo[url]">
     </div>
     <div class="new-photo-inputs">

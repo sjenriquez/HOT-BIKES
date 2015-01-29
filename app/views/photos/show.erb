@@ -2,7 +2,7 @@
   <a href="/photos/<%= photo.id %>"><img src="<%= photo.url %>"></a>
 
   <div class="photo-title">
-    <div><%= photo.title %></div>
+    <div class="title"><%= photo.title %></div>
     <% if photo.user_id == current_user.id %>
       <a class="edit" href="/photos/<%= photo.id %>/edit">Edit Title</a>
       <div class="delete">

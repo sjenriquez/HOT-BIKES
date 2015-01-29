@@ -1,0 +1,31 @@
+<div class="user-profile">
+
+  <div class="photo-user">
+    <form action="/user/<%= user.id %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <div class="user-details">
+        Name: <input type="text" name="user[name]" value="<%= user.name %>">
+      </div>
+      <div class="user-details">
+        Email address: <input type="text" name="user[email]" value="<%= user.email %>">
+      </div><div class="user-details">
+        Short bio: <textarea name="user[bio]"></textarea>
+      </div>
+      <div class="password">
+        Password: <input type="password" name="user[password]">
+      </div>
+      <div class="password">
+        Confirm Password: <input type="password" name="user[password_confirmation]">
+      </div>
+      <div class="submit">
+        <input type="Submit">
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="user-bikes">
+  <% user.photos.each do |photo| %>
+    <%= erb :'photos/show', locals: {photo: photo} %>
+  <% end %>
+</div>

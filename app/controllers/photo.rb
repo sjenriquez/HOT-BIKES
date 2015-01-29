@@ -8,9 +8,14 @@ get '/photos/new' do        # Route to new photo form
 end
 
 post '/photos' do           # Post route for new photo
-  photo = Photo.create(params[:photo])
-  current_user.photos << photo
-  redirect("/user/#{current_user.id}")
+  photo = Photo.new(params[:photo])
+  if photo.save
+    current_user.photos << photo
+    redirect("/user/#{current_user.id}")
+  else
+    @errors = photo.errors.messages
+    erb :'photos/new'
+  end
 end
 
 get '/photos/:id/edit' do   # Edit photo
