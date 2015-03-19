@@ -54,3 +54,7 @@ post '/like' do             # User likes a photo
     redirect("/photos/#{params[:photo_id]}")
   end
 end
+
+after do
+  ActiveRecord::Base.connection.close
+end
